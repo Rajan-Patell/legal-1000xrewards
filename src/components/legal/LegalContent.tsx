@@ -1,11 +1,22 @@
 
 import React from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const LegalContent: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <main className="flex-1 overflow-y-auto h-[calc(100vh-72px)] px-60 py-40 max-md:pt-[100px] max-md:px-5">
+    <main 
+      className={`flex-1 overflow-y-auto ${
+        isMobile 
+          ? 'px-4 py-6' 
+          : 'h-[calc(100vh-72px)] px-60 py-40 max-md:px-12'
+      }`}
+    >
       <div className="w-full">
-        <div className="flex w-full flex-col items-stretch text-[80px] font-bold tracking-[-1.6px] justify-center max-md:text-[40px]">
+        <div className={`flex w-full flex-col items-stretch font-bold tracking-[-1.6px] justify-center ${
+          isMobile ? 'text-[40px]' : 'text-[80px] max-md:text-[40px]'
+        }`}>
           <h1 className="bg-clip-text bg-[linear-gradient(90deg,var(--1000x-On-Surface,#271813)_22.05%,var(--1000x-Primary,#AA3700)_76.53%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
             Privacy Policy
           </h1>
