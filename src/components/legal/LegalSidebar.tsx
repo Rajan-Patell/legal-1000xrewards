@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const navItems = [
@@ -10,7 +11,7 @@ const navItems = [
 
 export const LegalSidebar: React.FC = () => {
   return (
-    <aside className="self-stretch min-w-60 overflow-hidden text-sm text-[#5B4138] font-semibold tracking-[0.1px] leading-none w-[360px] max-w-[360px] border-[#E4BEB2] border-r">
+    <aside className="self-stretch sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto min-w-60 text-sm text-[#5B4138] font-semibold tracking-[0.1px] leading-none w-[360px] max-w-[360px] border-[#E4BEB2] border-r">
       <div className="flex min-h-[82px] w-full items-center gap-2.5 overflow-hidden text-[22px] font-bold tracking-[0px] leading-none px-4 py-[27px] rounded-[100px]">
         Legal
       </div>

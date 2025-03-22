@@ -1,8 +1,9 @@
+
 import React from "react";
 
 export const LegalContent: React.FC = () => {
   return (
-    <main className="self-stretch min-w-60 overflow-hidden flex-1 shrink basis-[0%] pt-40 px-60 max-md:pt-[100px] max-md:px-5">
+    <main className="flex-1 overflow-y-auto h-[calc(100vh-72px)] px-60 py-40 max-md:pt-[100px] max-md:px-5">
       <div className="w-full">
         <div className="flex w-full flex-col items-stretch text-[80px] font-bold tracking-[-1.6px] justify-center max-md:text-[40px]">
           <h1 className="bg-clip-text bg-[linear-gradient(90deg,var(--1000x-On-Surface,#271813)_22.05%,var(--1000x-Primary,#AA3700)_76.53%)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
@@ -67,6 +68,20 @@ export const LegalContent: React.FC = () => {
             adhere to our terms and conditions, which are crucial for ensuring a
             smooth and enjoyable experience for everyone involved.
           </p>
+        </div>
+
+        {/* Add more content to demonstrate scrolling */}
+        <div className="text-[#5B4138] text-sm font-normal leading-5 tracking-[0.25px] mt-8 space-y-8">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <p key={i}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          ))}
         </div>
       </div>
     </main>
